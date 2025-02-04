@@ -3,6 +3,10 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SharedModule } from './shared/shared.module';
+import { CommonModule } from '@angular/common';
+import { AuthModule } from './auth/auth.module';
+import { ReactiveModule } from './reactive/reactive.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +14,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule,
+
   ],
   providers: [
     provideClientHydration(withEventReplay())
